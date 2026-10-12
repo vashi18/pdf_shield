@@ -19,13 +19,15 @@ from sqlalchemy.orm import Session, joinedload
 from .database import Base, engine, get_db, utcnow
 from .models import Analysis, AnalystNote, Case, FeedSync, IOC, OSINTLookup, Setting, ThreatFeed, ThreatIndicator
 from .schemas import AnalysisOut, CasePatch, OSINTRequest, SettingUpdate
-from .services.feeds import TRUSTED_FEEDS, empty_sync, is_trusted_feed_url
-from .services.ioc import build_ioc_rows, normalize_ioc
-from .services.pdf_analyzer import analyze_pdf
-from .services.reports import analysis_payload, csv_bytes, json_bytes, pdf_bytes
-from .services.risk import score_analysis
+from .feeds import TRUSTED_FEEDS, empty_sync, is_trusted_feed_url
+from .ioc import build_ioc_rows, normalize_ioc
+from .pdf_analyzer import analyze_pdf
+from .reports import analysis_payload, csv_bytes, json_bytes, pdf_bytes
+from .risk import score_analysis
 
-BASE_DIR = Path(__file__).resolve().parents[2]
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+
 DIST_DIR = BASE_DIR / "frontend" / "dist"
 DEFAULT_MAX_MB = int(os.getenv("PDFSHIELD_MAX_UPLOAD_MB", "25"))
 
