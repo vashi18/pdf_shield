@@ -1,0 +1,7 @@
+[
+  "tests/test_services.py::test_analysis_extracts_sha_metadata_urls_and_ip",
+  "tests/test_services.py::test_feed_allowlist_rejects_arbitrary_urls",
+  "tests/test_services.py::test_ioc_normalization_and_deduplication",
+  "tests/test_services.py::test_marker_detection_and_risk_scoring",
+  "tests/test_services.py::test_pdf_magic_and_size_validation"
+]
