@@ -3,7 +3,9 @@ import { Link, NavLink, Route, Routes, useLocation, useNavigate } from 'react-ro
 import { AnimatePresence, motion } from 'framer-motion'
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { Activity, AlertTriangle, ArrowUpRight, BarChart3, Bell, BookOpen, Check, ChevronDown, Clipboard, Copy, FileSearch, FileText, Fingerprint, FolderOpen, Gauge, Globe2, Hash, Inbox, LayoutDashboard, Loader2, Menu, Network, PanelLeftClose, PanelLeftOpen, RefreshCw, Search, Settings as SettingsIcon, Shield, ShieldCheck, SlidersHorizontal, Sparkles, UploadCloud, X, Zap } from 'lucide-react'
-import { api, type Analysis, type Finding, type IOC, type RiskClass, type Stats } from './lib/api'
+import { api, type Analysis, type Finding, type IOC, type RiskClass, type Stats } from './api'
+
+
 
 const navItems = [
   { to: '/', label: 'Overview', icon: LayoutDashboard },
