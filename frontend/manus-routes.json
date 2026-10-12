@@ -1,0 +1,1 @@
+{"routes":[{"path":"/","title":"Overview"},{"path":"/analyze","title":"Analyze PDF"},{"path":"/osint","title":"OSINT Investigations"},{"path":"/feeds","title":"Threat Intelligence"},{"path":"/iocs","title":"IOC Explorer"},{"path":"/reports","title":"Reports"},{"path":"/settings","title":"Settings"}]}
