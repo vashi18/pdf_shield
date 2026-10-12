@@ -3,7 +3,7 @@ FROM node:22-bookworm-slim AS frontend-build
 WORKDIR /app/frontend
 
 COPY frontend/package*.json ./
-RUN npm install
+RUN npm install --no-audit --no-fund
 
 COPY frontend/ ./
 RUN npm run build
@@ -25,9 +25,6 @@ COPY backend/ ./backend/
 
 COPY --from=frontend-build /app/frontend/dist/ ./frontend/dist/
 
-CMD ["sh", "-c", "uvicorn backend.app.main:app --host 0.0.0.0 --port ${PORT:-3000}"]
-
-
 EXPOSE 3000
 
-CMD ["sh", "-c", "uvicorn backend.app.main:app --host 0.0.0.0 --port ${PORT:-3000}"]
+CMD ["sh", "-c", "uvicorn backend.main:app --host 0.0.0.0 --port ${PORT:-3000}"]
